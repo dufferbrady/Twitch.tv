@@ -24,8 +24,8 @@ function userData(info) {
     logo.setAttribute('src', info.logo);
 
     container.appendChild(item);
-    item.appendChild(h1)
     item.appendChild(logo)
+    item.appendChild(h1)
 }
 
 
