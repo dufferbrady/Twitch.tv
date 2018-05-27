@@ -6,11 +6,25 @@ function twitchUser()  {
             url: url + users[i],
             dataType: 'jsonp',
             success: function(data) {
-                console.log(data);
+                // console.log(data);
+                userData(data);
             }
         })
     }
 }
+
+function userData(info) {
+    const container = document.getElementsByClassName('container')[0];
+    const h1 = document.createElement('h1');
+    const logo = document.createElement('img');
+
+    h1.textContent = info.display_name;
+    logo.setAttribute('src', info.logo);
+
+    container.appendChild(h1);
+    container.appendChild(logo);
+}
+
 
 $(document).ready(function() {
     twitchUser();
