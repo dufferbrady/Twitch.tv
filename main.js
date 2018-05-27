@@ -15,14 +15,17 @@ function twitchUser()  {
 
 function userData(info) {
     const container = document.getElementsByClassName('container')[0];
+    const item = document.createElement('div')
     const h1 = document.createElement('h1');
     const logo = document.createElement('img');
 
+    item.setAttribute('class', 'item');
     h1.textContent = info.display_name;
     logo.setAttribute('src', info.logo);
 
-    container.appendChild(h1);
-    container.appendChild(logo);
+    container.appendChild(item);
+    item.appendChild(h1)
+    item.appendChild(logo)
 }
 
 
