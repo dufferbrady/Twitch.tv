@@ -1,6 +1,6 @@
 function twitchUser()  {
     var url = 'https://wind-bow.gomix.me/twitch-api/channels/';
-    var users = ["ESL_SC2", "Lobosjr", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"]
+    var users = ["ESL_SC2","Lobosjr", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
     for (var i = 0; i < users.length; i++) {
         $.ajax({
             url: url + users[i] + '?callback=?',
@@ -15,11 +15,8 @@ function twitchUser()  {
 
 function userData(info) {
     var status;
-    if(info.partner == true) {
-        status = 'Online';
-    } else {
-        status = 'Offline';
-    }
+    info.partner == true ? status = 'Online' : status = 'Offline';
+
     const container = document.getElementsByClassName('container')[0];
     const item = document.createElement('div')
     const a = document.createElement('a');
@@ -35,10 +32,10 @@ function userData(info) {
     logo.setAttribute('src', info.logo);
 
     container.appendChild(item);
-    item.appendChild(logo)
-    a.appendChild(h1)
+    a.appendChild(h1);
+    item.appendChild(logo);
     item.appendChild(a);
-    item.appendChild(mode)
+    item.appendChild(mode);
 }
 
 
