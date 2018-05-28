@@ -22,10 +22,13 @@ function userData(info) {
     }
     const container = document.getElementsByClassName('container')[0];
     const item = document.createElement('div')
+    const a = document.createElement('a');
     const h1 = document.createElement('h1');
     const logo = document.createElement('img');
     const mode = document.createElement('div');
 
+    a.setAttribute('href', info.url);
+    a.setAttribute('target', '_blank');
     item.setAttribute('class', 'item');
     mode.textContent = status;
     h1.textContent = info.display_name;
@@ -33,7 +36,8 @@ function userData(info) {
 
     container.appendChild(item);
     item.appendChild(logo)
-    item.appendChild(h1)
+    a.appendChild(h1)
+    item.appendChild(a);
     item.appendChild(mode)
 }
 
