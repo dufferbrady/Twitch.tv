@@ -7,8 +7,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 1px solid red;
-    margin: 1%;
     width: 50%;
     padding: 2%;
 }
@@ -22,4 +20,12 @@
     font-weight: 400;
     text-align: center;
     font-size: 300%;
+}
+
+.item:nth-child(odd) {
+    background-color: #f3a09d;
+}
+
+.item:nth-child(even) {
+    background-color: #f3b39c;
 }
