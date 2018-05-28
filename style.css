@@ -16,6 +16,7 @@ body {
     width: 50%;
     height: 35rem;
     border-radius: 5%;
+    border: 1px solid white;
 }
 .item {
     display: flex;
@@ -25,6 +26,7 @@ body {
     width: 100%;
     padding: 2% 0;
     color: white;
+    border: 1px solid white;
 }
 
 .item a {
