@@ -19,6 +19,7 @@ function userData(info) {
 
     const container = document.getElementsByClassName('container')[0];
     const item = document.createElement('div')
+    item.style.display = 'block';
     const a = document.createElement('a');
     const h1 = document.createElement('h1');
     const logo = document.createElement('img');
@@ -42,9 +43,9 @@ function userData(info) {
 function onlineButton()  {
     const item = document.getElementsByClassName('item')
     const status = document.getElementsByClassName('status');
-    for (var i = 0; i < status.length; i++)  {
+    for (var i = 0; i < item.length; i++)  {
         if(status[i].innerText == 'Online') {
-            item[i].style.display = 'block';
+            item[i].style.display = 'inline-block';
         } else {
             item[i].style.display = 'none';
         }
@@ -64,7 +65,10 @@ function offlineButton()  {
 }
 
 function allButton() {
-    twitchUser();
+    const item = document.getElementsByClassName('item');
+    for (var i = 0; i < item.length; i++)  {
+        item[i].style.display = 'block';
+    }
 }
 
 $(document).ready(function() {
