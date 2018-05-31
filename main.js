@@ -28,6 +28,7 @@ function userData(info) {
     a.setAttribute('target', '_blank');
     item.setAttribute('class', 'item');
     mode.textContent = status;
+    mode.setAttribute('class', 'status');
     h1.textContent = info.display_name;
     logo.setAttribute('src', info.logo);
 
@@ -38,6 +39,33 @@ function userData(info) {
     item.appendChild(mode);
 }
 
+function onlineButton()  {
+    const item = document.getElementsByClassName('item')
+    const status = document.getElementsByClassName('status');
+    for (var i = 0; i < status.length; i++)  {
+        if(status[i].innerText == 'Online') {
+            item[i].style.display = 'block';
+        } else {
+            item[i].style.display = 'none';
+        }
+    }
+}
+
+function offlineButton()  {
+    const item = document.getElementsByClassName('item')
+    const status = document.getElementsByClassName('status');
+    for (var i = 0; i < status.length; i++)  {
+        if(status[i].innerText == 'Offline') {
+            item[i].style.display = 'block';
+        } else {
+            item[i].style.display = 'none';
+        }
+    }
+}
+
+function allButton() {
+    twitchUser();
+}
 
 $(document).ready(function() {
     twitchUser();
